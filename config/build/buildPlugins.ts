@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOptions } from './types/types';
 import { Configuration } from "webpack";
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
 export function buildPlugins({mode, paths, platform}: BuildOptions): Configuration['plugins']{
@@ -28,7 +27,6 @@ export function buildPlugins({mode, paths, platform}: BuildOptions): Configurati
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css'
         }))
-        plugins.push(new BundleAnalyzerPlugin())
     }
 
     return plugins;
