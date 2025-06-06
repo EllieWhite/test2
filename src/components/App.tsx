@@ -6,7 +6,7 @@ const App = () => {
     return (
         <div className={styles.block}>
             <img src={Cat} alt="" />
-            <p>aaaa</p>
+            <p>aaaччччa</p>
         <Outlet />
         </div>
     )
